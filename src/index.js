@@ -15,7 +15,7 @@ inputEl.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 function onSearch(evt) {
   evt.preventDefault();
 
-  const searchCountry = inputEl.value;
+  const searchCountry = inputEl.value.trim();
 
   API.fetchCountryInfo(searchCountry)
     .then(response => {
