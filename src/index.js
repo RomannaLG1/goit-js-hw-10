@@ -16,10 +16,15 @@ function onSearch(evt) {
   evt.preventDefault();
 
   const searchCountry = inputEl.value.trim();
+ 
+  if (!searchCountry) {
+    clearListEl();
+        return;
+  }
 
   API.fetchCountryInfo(searchCountry)
     .then(response => {
-      if (response.length > 10) {
+       if (response.length > 10) {
         clearListEl();
         Notiflix.Notify.info(
           'Too many matches found. Please enter a more specific name.'
@@ -27,7 +32,7 @@ function onSearch(evt) {
       } else {
         if (response.length >= 2 && response.length <= 10) {
           clearListEl();
-          renderCountryCard(response);
+                    renderCountryCard(response);
         } else {
           clearListEl();
           renderCountryCardInfo(response);
