@@ -15,4 +15,9 @@ function fetchCountryInfo(countryName) {
     });
 }
 
+
+// function fetchPrice(countryName) {
+//   return fetch(``)
+// }
+
 export default { fetchCountryInfo };
