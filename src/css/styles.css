@@ -27,6 +27,10 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
   border-bottom: 2px solid rgb(255, 255, 255);
   color: rgb(56, 56, 56);
   font-size: 27px;
+  background-image: url(../icons-search.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 45px;
 }
 #search-box:hover,
 #search-box:focus,
